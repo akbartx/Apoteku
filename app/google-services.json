@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "29875576063",
+    "firebase_url": "https://apotek-8f791-default-rtdb.firebaseio.com",
+    "project_id": "apotek-8f791",
+    "storage_bucket": "apotek-8f791.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29875576063:android:2cbb98ef02f1505237c0ca",
+        "android_client_info": {
+          "package_name": "com.aplikasi.apoteku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2tZgtr1J3n3kwclWyNqCCj6atMSFSERQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

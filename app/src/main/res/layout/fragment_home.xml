@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard"
+    tools:context=".HomeFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container">
+        <!-- Fragment akan dimuat di sini -->
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraintLayout">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title_home"
+                    android:paddingTop="46dp"
+                    android:layout_marginTop="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Apoteku"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/logo_apoteku"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/deskripsi_apoteku"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Being Good Being Healthy"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="italic"
+                    android:textColor="@color/dark_blue"
+                    app:layout_constraintEnd_toStartOf="@+id/logo_apoteku"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_home"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:id="@+id/logo_apoteku"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/title_home"
+                    android:src="@drawable/logo"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="175dp"
+                    android:id="@+id/menu_pertama"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="75dp"
+                    android:padding="20dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_apoteku">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/konsultasi_card"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/konsultasi_title"
+                                android:text="Konsultasi Ahli"
+                                android:fontFamily="sans-serif-black"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_blue"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/konsultasi_image"
+                                android:src="@drawable/konsul"
+                                android:layout_below="@id/konsultasi_title"
+                                android:layout_marginTop="1dp"
+                                android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/beli_obat_card"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/beli_obat_title"
+                                android:text="Beli Obat"
+                                android:fontFamily="sans-serif-black"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_blue"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/beli_obat_image"
+                                android:src="@drawable/obat"
+                                android:layout_below="@id/beli_obat_title"
+                                android:layout_marginTop="1dp"
+                                android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="175dp"
+                    android:id="@+id/menu_kedua"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="20dp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menu_pertama">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/info_obat_card"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/info_obat_title"
+                                android:text="Informasi Obat"
+                                android:fontFamily="sans-serif-black"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_blue"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/info_obat_image"
+                                android:src="@drawable/info"
+                                android:layout_below="@id/info_obat_title"
+                                android:layout_marginTop="1dp"
+                                android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/pusat_bantuan_card"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/pusat_bantuan_title"
+                                android:text="Pusat Bantuan"
+                                android:fontFamily="sans-serif-black"
+                                android:textSize="16sp"
+                                android:textColor="@color/dark_blue"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/pusat_bantuan_image"
+                                android:src="@drawable/bantuan"
+                                android:layout_below="@id/pusat_bantuan_title"
+                                android:layout_marginTop="1dp"
+                                android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
